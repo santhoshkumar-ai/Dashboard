@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: rgb(47, 11, 94);
+    border-bottom: 1px solid #ddd;
+} 
+
+header h1{
+    color:white;
+    font-style: oblique;
+    font-size:25px;
+}
+
+header img {
+    width:50px;
+    border-radius: 29px;
+}
+
+aside{
+    background-color: #f9fbfc;
+    width:25vw;
+    height:100vh;
+}
+
+aside img{
+    width:45px;
+    border-radius: 10px;
+    padding:10px;
+}
+
+aside h1{
+    color: rgb(219, 200, 179);
+    font-style:  Futura;
+    font-size:20px;
+    margin-top: 10px;
+}
+
+ aside .container {
+     background-color: lightblue;
+     display:flex;
+     flex-direction: row;
+     border-radius: 15px;
+     margin: 10px;
+     
+}
+
+aside .container h1{
+    color: rgb(82, 138, 184);
+    font-style:  Futura;
+    font-size:20px;
+    
+    margin-top: 10px;
+}
+
+
+ aside .container-1 {
+     
+     display:flex;
+     flex-direction: row;
+     border-radius: 15px;
+     margin-top: 30px;
+     margin: 10px;
+     
+}
+
+
+ 
+
+.main{
+    background-color: rgb(233, 233, 217);
+    width:100vw;
+    padding: 10px ;
+}
+
+.heading{
+    color:rgb(146, 121, 89);
+    font-size:20px;
+}
+
+.state{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+.card{
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:20px
+}
+
+.card h1{
+    color:rgb(96, 39, 230)
+}
+
+.card p {
+    color:rgb(146, 121, 89);
+}
+
+
+
+.employe-state{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
+.employe-card{
+    background-color: #f5f5f5;
+    border-radius: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    box-shadow:0 2px 5px rgba(0,0,0,0.1);
+    padding:20px;
+}
+
+.employe-card h1{
+    font-size: 25px;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    background:white;
+    border-radius:10px;
+    overflow:hidden;
+    margin-top: 25px;
+}
+
+thead{
+    background:#082b5c;
+    color:white;
+}
+
+th,td{
+    padding:15px;
+    text-align:left;
+}
+
+tbody tr:nth-child(even){
+    background:#f7f7f7;
+}
+
+.badge{
+    background:#dff5d8;
+    color:green;
+    padding:6px 12px;
+    border-radius:20px;
+    font-weight:bold;
+}
+
+.hamburger{
+    display:none;
+}
+
+/* =========================
+   TABLET (768px)
+========================= */
+@media screen and (max-width: 768px) {
+
+    aside{
+        display: none;
+    }
+
+    .state{
+        grid-template-columns: repeat(4,1fr);
+    }
+
+    .employe-state{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .main{
+        width: 100%;
+    }
+
+    header{
+        padding: 15px 20px;
+    }
+
+    .hamburger{
+        display: block;
+        color: white;
+        font-size: 24px;
+    }
+}
+
+/* =========================
+   MOBILE (375px)
+========================= */
+@media screen and (max-width: 375px) {
+
+    aside{
+        display: none;
+    }
+
+    .state{
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    .employe-state{
+        grid-template-columns: 1fr;
+    }
+
+    .card{
+        margin: 5px;
+        padding: 15px;
+    }
+
+    .card h1{
+        font-size: 22px;
+    }
+
+    .employe-card{
+        margin: 5px;
+    }
+
+    table{
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+
+    header h1{
+        font-size: 18px;
+    }
+
+    header img{
+        width: 40px;
+    }
+}
